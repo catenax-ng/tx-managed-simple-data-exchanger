@@ -21,7 +21,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "sde.fullname" . }}
+  name: {{ include "sde.fullname" . }}-backend
   namespace: {{ .Release.Namespace | default "default" | quote }}
   labels:
     {{- include "sde.labels" . | nindent 4 }}
