@@ -54,7 +54,7 @@ spec:
           - containerPort: {{ .Values.frontend.portContainer }}  
           envFrom:
             - configMapRef:
-                name: {{ include "sde.fullname" . }}-configmap
+                name: {{ include "sde.fullname" . }}-frontend-configmap
           volumeMounts:
             - name: configuration
               mountPath: /app/configuration.properties
@@ -62,7 +62,7 @@ spec:
       volumes:
         - name: configuration
           configMap:
-            name: {{ include "sde.fullname" . }}-configmap
+            name: {{ include "sde.fullname" . }}-frontend-configmap
             items:
               - key: configuration.properties
                 path: configuration.properties
