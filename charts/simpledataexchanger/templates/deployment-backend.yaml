@@ -68,7 +68,7 @@ spec:
                   key: password
           envFrom:
             - configMapRef:
-                name: {{ include "sde.fullname" . }}-configmap
+                name: {{ include "sde.fullname" . }}-backend-configmap
           volumeMounts:
             - name: configuration
               mountPath: /app/configuration.properties
@@ -76,7 +76,7 @@ spec:
       volumes:
         - name: configuration
           configMap:
-            name: {{ include "sde.fullname" . }}-configmap
+            name: {{ include "sde.fullname" . }}-backend-configmap
             items:
               - key: configuration.properties
                 path: configuration.properties
