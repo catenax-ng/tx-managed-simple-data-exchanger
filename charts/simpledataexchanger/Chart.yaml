@@ -32,8 +32,7 @@ description: A Helm chart for Kubernetes
 type: application
 
 sources:
-  - https://github.com/eclipse-tractusx/managed-simple-data-exchanger
-  
+  - https://github.com/eclipse-tractusx/managed-simple-data-exchanger 
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
