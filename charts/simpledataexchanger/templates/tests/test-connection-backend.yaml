@@ -30,5 +30,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{ include "sde.fullname" . }}:{{ .Values.backend.service.port }}']
+      args: ['{{ include "sde.fullname" . }}-backend:{{ .Values.backend.service.port }}']
   restartPolicy: Never
