@@ -1,4 +1,4 @@
-# # Helm chart for Simple-Data-Exchanger
+## Helm chart for Simple-Data-Exchanger
 
 This helm chart installs the Catena-X Portal application which consists of
 
@@ -10,13 +10,13 @@ The referenced container images are for demonstration purposes only.
 
 To install the chart with the release name portal:
 
-$ helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
-$ helm install sde tractusx-dev/sde
+``` $ helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev ```
 
-To install the helm chart into your cluster with your values:
-
-$ helm install -f your-values.yaml portal tractusx-dev/sde
+```$ helm install sde tractusx-dev/sde```
 
 ## Requirements
 
-https://charts.bitnami.com/bitnami	postgresql	11.9.13
+| Repository                                         | Name       | Version  |
+|--------------------------------------------------- |------------|--------- |
+| `https://charts.bitnami.com/bitnami`               | postgresql | 11.9.13  |                     
+	
