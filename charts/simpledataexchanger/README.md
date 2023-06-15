@@ -25,16 +25,16 @@ The templates require your application to built into a Docker image. The Docker 
 
 This project provides the following files:
 
-| File                                               | Description                                                             |
-|--------------------------------------------------- |-----------------------------------------------------------------------  |  
-| `/charts/TX-SDE/Chart.yaml`                        | The definition file for your application                                | 
-| `/charts/TX-SDE/values.yaml`                       | Configurable values that are inserted into the following template files |   
-| `/charts/TX-SDE/values-int.yaml`                   | Configurable values for int env                                         | 
-| `/charts/TX-SDE/templates/deployment.yaml`         | Template to configure your application deployment.                      |
-| `/charts/TX-SDE/templates/ingress.yaml`            | Template to configure your application deployment.                      | 
-| `/charts/TX-SDE/templates/service.yaml`            | Template to configure your application deployment.                      | 
-| `/charts/TX-SDE/templates/hpa.yaml`                | Template to configure your application deployment.                      | 
-| `/charts/TX-SDE/templates/NOTES.txt`               | Helper to enable locating your application IP and PORT                  | 
+| File                                            | Description                                                             |
+|-------------------------------------------------|-----------------------------------------------------------------------  |  
+| `/charts/sde/Chart.yaml`                        | The definition file for your application                                | 
+| `/charts/sde/values.yaml`                       | Configurable values that are inserted into the following template files |   
+| `/charts/sde/values-int.yaml`                   | Configurable values for int env                                         | 
+| `/charts/sde/templates/deployment.yaml`         | Template to configure your application deployment.                      |
+| `/charts/sde/templates/ingress.yaml`            | Template to configure your application deployment.                      | 
+| `/charts/sde/templates/service.yaml`            | Template to configure your application deployment.                      | 
+| `/charts/sde/templates/hpa.yaml`                | Template to configure your application deployment.                      | 
+| `/charts/sde/templates/NOTES.txt`               | Helper to enable locating your application IP and PORT                  | 
 
 ## Helm Commands
 ``` $ helm repo add simple-data-exchanger-tx https://github.com/eclipse-tractusx/managed-simple-data-exchanger ```

@@ -1,6 +1,10 @@
 ## Helm chart for Simple-Data-Exchanger
 
-This helm chart installs the Catena-X Portal application which consists of
+This helm chart installs the SDE application which consists of
+     
+   * [Frontend](https://github.com/catenax-ng/tx-managed-simple-data-exchanger-frontend)
+   * [Backend](https://github.com/catenax-ng/tx-managed-simple-data-exchanger-backend) 
+    
 
 For further information please refer to Technical Documentation.
 
