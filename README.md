@@ -1,19 +1,22 @@
-# Helm Charts
+# # Helm chart for Simple-Data-Exchanger
 
-## Chart Linting
+This helm chart installs the Catena-X Portal application which consists of
 
-Chart linting is performed using [helm's CT tool](https://github.com/helm/chart-testing).
+For further information please refer to Technical Documentation.
 
-Configuration files for [CT](../ct.yaml) have been provided.
+The referenced container images are for demonstration purposes only.
 
-## Generate Chart Readme's
+## Installation
 
-To generate chart README.md files from its respective values.yaml file we use the [helm-docs tool](https://github.com/norwoodj/helm-docs):
+To install the chart with the release name portal:
 
-```shell
-docker run --rm --volume "$(pwd):/helm-docs" -u $(id -u) jnorwood/helm-docs:v1.10.0
-```
+$ helm repo add tractusx-dev https://eclipse-tractusx.github.io/charts/dev
+$ helm install sde tractusx-dev/sde
 
-## Confidential SDE Settings
+To install the helm chart into your cluster with your values:
 
-Some SDE settings should better not be part of the actual deployment (like credentials to the database or the vault). Therefore, it is possible to deploy a secret with these confidential settings beforehand, and make it known to the deployment by setting the secret name in the field of the values.yaml file.
+$ helm install -f your-values.yaml portal tractusx-dev/sde
+
+## Requirements
+
+https://charts.bitnami.com/bitnami	postgresql	11.9.13
