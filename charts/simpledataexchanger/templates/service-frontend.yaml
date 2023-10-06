@@ -31,5 +31,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "sde.selectorLabels" . | nindent 4 }}
+    {{- include "sde.frontend.selectorLabels" . | nindent 4 }}
 
