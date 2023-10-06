@@ -63,6 +63,30 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
 
 {{/*
+backend Common labels
+*/}}
+{{- define "sde.backend.labels" -}}
+helm.sh/chart: {{ include "sde.chart" . }}
+{{ include "sde.backend.selectorLabels" . }}
+{{- if .Chart.AppVersion }}
+app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+{{- end }}
+app.kubernetes.io/managed-by: {{ .Release.Service }}
+{{- end }}
+
+{{/*
+frontend Common labels
+*/}}
+{{- define "sde.frontend.labels" -}}
+helm.sh/chart: {{ include "sde.chart" . }}
+{{ include "sde.frontend.selectorLabels" . }}
+{{- if .Chart.AppVersion }}
+app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+{{- end }}
+app.kubernetes.io/managed-by: {{ .Release.Service }}
+{{- end }}
+
+{{/*
 Selector labels
 */}}
 {{- define "sde.selectorLabels" -}}
