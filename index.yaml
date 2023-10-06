@@ -1,0 +1,22 @@
+apiVersion: v1
+entries:
+  sde:
+  - apiVersion: v2
+    appVersion: 2.1.1
+    created: "2023-10-06T22:28:50.872603+05:30"
+    dependencies:
+    - alias: sdepostgresql
+      condition: sdepostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    description: A Helm chart for Kubernetes
+    digest: d6ab952395aed75c02a74e9cd33588d15a29c016a9a18e197350c6a98b7df661
+    name: sde
+    sources:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger
+    type: application
+    urls:
+    - https://catenax-ng.github.io/tx-managed-simple-data-exchanger/sde-0.0.10.tgz
+    version: 0.0.10
+generated: "2023-10-06T22:28:50.868068+05:30"
