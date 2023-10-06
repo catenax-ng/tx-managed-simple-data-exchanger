@@ -22,7 +22,7 @@ kind: Service
 metadata:
   name: {{ include "sde.fullname" . }}-frontend
   labels:
-    {{- include "sde.labels" . | nindent 4 }}
+    {{- include "sde.frontend.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.frontend.service.type }}
   ports:

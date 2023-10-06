@@ -22,7 +22,7 @@ kind: Deployment
 metadata:
   name: {{ include "sde.fullname" . }}-frontend
   labels:
-    {{- include "sde.labels" . | nindent 4 }}
+    {{- include "sde.frontend.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
