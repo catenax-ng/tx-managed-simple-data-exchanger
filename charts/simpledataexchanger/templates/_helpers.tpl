@@ -95,6 +95,45 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
+backend Selector labels
+*/}}
+{{- define "sde.backend.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "sde.name" . }}-backend
+app.kubernetes.io/instance: {{ .Release.Name }}-backend
+{{- end }}
+
+{{/*
+frontend Selector labels
+*/}}
+{{- define "sde.frontend.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "sde.name" . }}-frontend
+app.kubernetes.io/instance: {{ .Release.Name }}-frontend
+{{- end }}
+
+
+{{/*
+Create the name of the service account to use
+*/}}
+{{- define "sde.backend.serviceAccountName" -}}
+{{- if .Values.serviceAccount.create }}
+{{- default (include "sde.fullname" .) .Values.serviceAccount.name }}
+{{- else }}
+{{- default "default" .Values.serviceAccount.name }}
+{{- end }}
+{{- end }}
+
+{{/*
+Create the name of the service account to use
+*/}}
+{{- define "sde.frontend.serviceAccountName" -}}
+{{- if .Values.serviceAccount.create }}
+{{- default (include "sde.fullname" .) .Values.serviceAccount.name }}
+{{- else }}
+{{- default "default" .Values.serviceAccount.name }}
+{{- end }}
+{{- end }}
+
+{{/*
 Create the name of the service account to use
 */}}
 {{- define "sde.serviceAccountName" -}}
