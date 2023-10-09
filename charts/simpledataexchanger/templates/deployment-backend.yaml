@@ -31,7 +31,7 @@ spec:
   {{- end }}
   selector:
     matchLabels:
-      {{- include "sde.selectorLabels" . | nindent 6 }}
+      {{- include "sde.backend.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.backend.podAnnotations }}
@@ -39,7 +39,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "sde.selectorLabels" . | nindent 8 }}
+        {{- include "sde.backend.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.backend.imagePullSecrets }}
       imagePullSecrets:
