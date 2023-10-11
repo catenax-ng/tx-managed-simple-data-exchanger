@@ -35,7 +35,7 @@ sdepostgresql:
 
 backend:
   image:
-    repository: tractusx/managed-simple-data-exchanger-backend
+    repository: ghcr.io/catenax-ng/tx-managed-simple-data-exchanger-backend
     pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
     tag: ""
@@ -184,10 +184,31 @@ backend:
       portal.backend.clientId=default
       portal.backend.clientSecret=default
       portal.backend.grantType=default
+      ## Notification Email server info
+      mail.smtp.username= default
+      mail.smtp.password= default
+      mail.smtp.host= default
+      mail.smtp.port= default
+      mail.to.address= default
+      mail.cc.address= default
+      mail.from.address= default
+      mail.replyto.address= default
+      mail.smtp.starttls.enable= default
+      mail.smtp.auth= default
+      ## SFTP Agent config
+      sftp.host= default
+      sftp.port=22 
+      sftp.username= default
+      sftp.password= default
+      sftp.location.tobeprocessed= default
+      sftp.location.inprogress= default
+      sftp.location.success= default
+      sftp.location.partialsucess= default
+      sftp.location.failed= default
 
 frontend:
   image:
-    repository: tractusx/managed-simple-data-exchanger-frontend
+    repository: ghcr.io/catenax-ng/tx-managed-simple-data-exchanger-frontend
     pullPolicy: Always
       # Overrides the image tag whose default is the chart appVersion.
     tag: ""
