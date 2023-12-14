@@ -145,9 +145,11 @@ backend:
       logging.level.root=info
       digital-twins.hostname=default
       digital-twins.authentication.url=default
+      digital-twins.registry.uri=default
+      digital-twins.registry.lookup.uri=default
       digital-twins.authentication.clientId=default
       digital-twins.authentication.clientSecret=default
-      digital-twins.authentication.grantType=client_credentials
+      digital-twins.authentication.scope=default
       edc.hostname=default
       edc.apiKeyHeader=X-Api-Key
       edc.apiKey=default
