@@ -207,6 +207,11 @@ backend:
       sftp.location.success= default
       sftp.location.partialsucess= default
       sftp.location.failed= default
+      policy.hub.hostname=default
+      policy.hub.authentication.url=default
+      policy.hub.clientId=default
+      policy.hub.clientSecret=default
+      policy.hub.grantType=client_credentials
 
 frontend:
   image:
