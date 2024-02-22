@@ -92,6 +92,24 @@ entries:
     - https://github.com/catenax-ng/tx-managed-simple-data-exchanger/releases/download/sde-1.0.1/sde-1.0.1.tgz
     version: 1.0.1
   - apiVersion: v2
+    appVersion: 2.3.5
+    created: "2024-02-22T05:01:46.909769641Z"
+    dependencies:
+    - alias: sdepostgresql
+      condition: sdepostgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.x.x
+    description: A Helm chart for simple data exchanger
+    digest: 6013b96e278835eaa8f3216e1aa9aff85474fc3de589a53d5d9cc45c463f51d4
+    name: sde
+    sources:
+    - https://github.com/eclipse-tractusx/managed-simple-data-exchanger
+    type: application
+    urls:
+    - https://github.com/catenax-ng/tx-managed-simple-data-exchanger/releases/download/sde-0.1.4/sde-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
     appVersion: 2.3.3
     created: "2023-12-07T09:45:00.967327804Z"
     dependencies:
@@ -307,4 +325,4 @@ entries:
     urls:
     - https://github.com/catenax-ng/tx-managed-simple-data-exchanger/releases/download/sde-0.0.1/sde-0.0.1.tgz
     version: 0.0.1
-generated: "2023-12-22T06:58:41.161040017Z"
+generated: "2024-02-22T05:01:46.909914458Z"
