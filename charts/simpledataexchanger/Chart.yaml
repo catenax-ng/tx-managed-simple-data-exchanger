@@ -25,4 +25,4 @@ dependencies:
     name: postgresql
     alias: sdepostgresql
     repository: https://charts.bitnami.com/bitnami
-    version: 13.x.x
+    version: 12.x.x
